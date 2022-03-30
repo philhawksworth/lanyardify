@@ -1,0 +1,27 @@
+[build] 
+  publish = "www"
+  command = "echo no build command"
+
+[dev] 
+  publish = "www"
+  command = "echo no build command"
+
+[[redirects]]
+  from = "/badge/save"
+  to = "/.netlify/functions/badge-save"
+  status = 200
+
+[[redirects]]
+  from = "/badge/make/*"
+  to = "/.netlify/functions/badge-make"
+  status = 200
+
+[[redirects]]
+  from = "/badge/*"
+  to = "/.netlify/functions/badge-view"
+  status = 200
+
+[[redirects]]
+  from = "/og/badge/*"
+  to = "/.netlify/functions/badge-og"
+  status = 200

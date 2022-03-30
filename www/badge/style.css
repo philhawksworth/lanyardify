@@ -1,0 +1,328 @@
+@font-face {
+  font-display: swap;
+  font-family: Pacaembu;
+  font-weight: 100 1000;
+  src: url("/badge/fonts/PacaembuVar-latin.woff2") format("woff2");
+}
+
+
+:root {
+  --fontDisplay: Pacaembu, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --fontSecondary: Amatic SC, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --jam-yellow: #FFAB2B;
+  --jam-pinklight: #FF57A8;
+  --jam-aquamarine: #3FDFF0;;
+  --jam-blue: #0077FF;
+  --jam-purple: #4444FF;
+  --jam-darkblue: #111E51;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  text-align: center;
+  background-color: var(--jam-darkblue);
+  font-family: var(--fontDisplay);
+  color: #fff;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.container { 
+
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  align-items: start;
+}
+
+
+.info-pane {
+  margin-top: 40px;
+}
+
+.badge-pane {
+  display: inline-block;
+  position: relative;
+  width: 433px;
+  height: 920px;
+  margin-right: 2rem;
+}
+
+.badge-bg {
+  z-index: 100;
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.panel-shadow {
+  border-radius: 16px;
+  box-shadow: 8px 8px 0 #000;
+}
+
+
+.jamstack-conf-logo {
+  background-image: url(/badge/img/jamstack-conf-2021.svg);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  background-size: contain;
+  background-position-x: center;
+  height: 4.5rem;
+  margin: 2rem auto 0;
+}
+
+.panel-blue {
+  background-color: var(--jam-purple);
+  padding: 2rem;
+  margin-top: 2rem;
+  color: #fff;
+  max-width: 500px
+}
+
+a:link,
+a:visited {
+  color: #fff;
+}
+
+
+a.primary-cta:link,
+a.primary-cta:visited,
+input[type="submit"] {
+  font-family: var(--fontDisplay);
+  font-weight: 600;
+  display: inline-block;
+  font-size: 1.5rem;
+  padding:0.6rem 2rem;
+  margin: 2rem 0;
+  border: solid 3px #000;
+  color: #000;
+  text-decoration: none;
+  background: rgb(0,255,178);
+  background: linear-gradient(0deg, rgba(0,255,178,1) 0%, rgba(136,249,237,1) 100%);
+  cursor: pointer;
+}
+a.primary-cta:hover,
+a.primary-cta:focus,
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+  background: var(--jam-pinklight);
+  color: #fff;
+}
+input[type="submit"]:active,
+input[type="submit"].active {
+  background: var(--jam-yellow);
+}
+
+
+.upload-files {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+.upload-files > .form-field {
+  display: block;
+  flex-grow: 1;
+  flex-basis: 8em; /* 240px /24 */
+  align-items: center;
+}
+
+.upload-files .form-field-label {
+  display: block;
+}
+
+
+
+label {
+  color: #fff;
+  font-family: var(--fontSecondary);
+}
+
+
+input[type=file] {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
+.file-upload-icon {
+  background-color: #fff;
+  border: 1px solid #000;
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px 4px 4px 6px;
+  margin: 2rem auto 1rem;
+}
+.file-upload-icon img {
+  height: 52px;
+  width:55px
+}
+
+
+.file-upload-icon:focus,
+.file-upload-icon:hover {
+  background-color: var(--jam-aquamarine);
+}
+
+.shadow-pinklight {
+  box-shadow: 8px 8px 0 var(--jam-pinklight);
+}
+.shadow-yellow {
+  box-shadow: 8px 8px 0 var(--jam-yellow);
+}
+
+
+.salutation,
+.badge-name {
+  font-family: var(--fontDisplay);
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     3px 5px 0 #000;
+}
+
+.badge-label {
+  position: absolute;
+  top: 618px;
+  left: 56px;
+  z-index: 110;
+}
+.badge-name {
+  text-align: left;
+  font-size: 2rem;
+  text-shadow:
+  -2px -2px 0 #000,  
+   2px -2px 0 #000,
+   -2px 2px 0 #000,
+    3px 5px 0 #000;
+}
+
+.badge-image-then {
+  display: inline-block;
+  position: absolute;
+  top: 480px;
+  left: 58px;
+  width: 108px;
+  height: 108px;
+  z-index: 110;
+  background-size: cover;
+  background-position-x: center;
+}
+.badge-image-now {
+  display: inline-block;
+  position: absolute;
+  top: 407px;
+  left: 222px;
+  width: 146px;
+  height: 146px;
+  z-index: 110;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.guidance {
+  margin-top: 2rem;
+}
+.guidance p {
+ margin: 0.2rem 0 0;
+}
+
+.strap {
+  margin: 0rem 0 2rem 5rem;
+  position:relative;
+}
+
+.tape {
+  border: 1px solid #000;
+  color: #fff;
+  box-shadow: 2px 2px 0px #000000;
+  font-family: var(--fontDisplay);
+  font-size: 1rem;
+  padding: 0.2em 0.8em;
+  font-weight: bold;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     2px 2px 0 #000;
+}
+
+.started {
+  background: var(--jam-blue);
+  transform: rotate(-1deg);
+  display: inline-block;
+  z-index: 20;
+}
+.going {
+  background: var(--jam-aquamarine);
+  transform: rotate(-2deg);
+  display: inline-block;
+  margin-left: -10px;
+  margin-right: -10px;
+  position: relative;
+  z-index: 40;
+  top:5px;
+}
+.date {
+  background: var(--jam-pinklight);
+  transform: rotate(2deg);
+  display: inline-block;
+  position: relative;
+  z-index: 30;
+}
+
+.scrawl {
+  font-family: var(--fontDisplay);
+  font-size: 1em;
+}
+
+.form-field {
+  display: flex;
+  width: 100%;
+  font-size: 1.5em;
+}
+.form-field-label {
+  padding-left: 1em;
+  flex-basis: 5em;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--fontSecondary);
+}
+.form-field-label svg {
+  margin-left: .5em;
+}
+.form-field-input {
+  flex-grow: 999;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  border-color: var(--jam-darkblue);
+  padding: .15em .25em;
+  border-radius: .15em;
+}
+.form-field-input:not(:focus, :hover),
+.form-field-input[readonly] {
+  background-color: transparent;
+  border-color: transparent;
+  color: inherit;
+}
